@@ -20,6 +20,8 @@ import com.google.android.gms.analytics.Tracker;
 import java.util.ArrayList;
 import java.util.List;
 
+import app_lock.project.beryl.com.myapplock.navigation.HomeActivity;
+
 /**
  * Created by Shadab Aazam on 11/09/2018.
  */
@@ -86,13 +88,13 @@ public class PasswordRecoverSetActivity extends AppCompatActivity {
                     editor.putInt(AppLockConstants.QUESTION_NUMBER, questionNumber);
                     editor.commit();
 
-                    Intent i = new Intent(PasswordRecoverSetActivity.this, LoadingActivity.class);
+                    Intent i = new Intent(PasswordRecoverSetActivity.this, HomeActivity.class);
                     startActivity(i);
                     finish();
                 } else {
                     Toast.makeText(getApplicationContext(), "Please select a question and write an answer", Toast.LENGTH_SHORT).show();
                 }
-                AppLockLogEvents.logEvents(AppLockConstants.PASSWORD_RECOVER_SET_SCREEN, "Confirm", "confirm", "");
+//                AppLockLogEvents.logEvents(AppLockConstants.PASSWORD_RECOVER_SET_SCREEN, "Confirm", "confirm", "");
             }
         });
 

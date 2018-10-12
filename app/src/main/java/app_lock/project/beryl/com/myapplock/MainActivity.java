@@ -93,7 +93,6 @@ public class MainActivity extends AppCompatActivity {
         isRated = sharedPreferences.getBoolean(AppLockConstants.IS_RATED, false);
         editor.putLong(AppLockConstants.NUM_OF_TIMES_APP_OPENED, numOfTimesAppOpened);
         editor.commit();
-
         initActionbar(this, getSupportActionBar(), "Home Page");
 
 

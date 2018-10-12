@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 
+import app_lock.project.beryl.com.myapplock.navigation.HomeActivity;
+
 
 /**
  * Created by Shadab Aazam on 11/09/2018.
@@ -23,7 +25,7 @@ public class LoadingActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent i = new Intent(LoadingActivity.this, MainActivity.class);
+                Intent i = new Intent(LoadingActivity.this, HomeActivity.class);
                 startActivity(i);
                 finish();
             }

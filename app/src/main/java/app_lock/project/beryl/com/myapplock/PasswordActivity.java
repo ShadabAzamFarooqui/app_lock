@@ -14,6 +14,8 @@ import com.google.android.gms.analytics.HitBuilders;
 import com.google.android.gms.analytics.Tracker;
 import com.takwolf.android.lock9.Lock9View;
 
+import app_lock.project.beryl.com.myapplock.navigation.HomeActivity;
+
 /**
  * Created by Shadab Aazam on 11/09/2018.
  */
@@ -41,13 +43,13 @@ public class PasswordActivity extends AppCompatActivity {
             public void onFinish(String password) {
                 if (sharedPreferences.getString(AppLockConstants.PASSWORD, "").matches(password)) {
                     Toast.makeText(getApplicationContext(), "Success : Password Match", Toast.LENGTH_SHORT).show();
-                    Intent i = new Intent(PasswordActivity.this, LoadingActivity.class);
+                    Intent i = new Intent(PasswordActivity.this, HomeActivity.class);
                     startActivity(i);
                     finish();
-                    AppLockLogEvents.logEvents(AppLockConstants.PASSWORD_CHECK_SCREEN, "Correct Password", "correct_password", "");
+//                    AppLockLogEvents.logEvents(AppLockConstants.PASSWORD_CHECK_SCREEN, "Correct Password", "correct_password", "");
                 } else {
                     Toast.makeText(getApplicationContext(), "Wrong Pattern Try Again", Toast.LENGTH_SHORT).show();
-                    AppLockLogEvents.logEvents(AppLockConstants.PASSWORD_CHECK_SCREEN, "Wrong Password", "wrong_password", "");
+//                    AppLockLogEvents.logEvents(AppLockConstants.PASSWORD_CHECK_SCREEN, "Wrong Password", "wrong_password", "");
                 }
             }
         });
@@ -57,7 +59,7 @@ public class PasswordActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(PasswordActivity.this, PasswordRecoveryActivity.class);
                 startActivity(i);
-                AppLockLogEvents.logEvents(AppLockConstants.PASSWORD_CHECK_SCREEN, "Forget Password", "forget_password", "");
+//                AppLockLogEvents.logEvents(AppLockConstants.PASSWORD_CHECK_SCREEN, "Forget Password", "forget_password", "");
             }
         });
     }

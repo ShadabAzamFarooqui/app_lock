@@ -69,13 +69,13 @@ public class NewAppInstalledReceiver extends BroadcastReceiver {
                     public void onClick(DialogInterface dialog, int id) {
                         // User clicked OK button
                         sharedPreference.addLocked(context, packageName);
-                        AppLockLogEvents.logEvents(AppLockConstants.NEW_APP_INSTALL_DIALOG_BOX, "Lock Clicked", "lock_clicked", packageName);
+//                        AppLockLogEvents.logEvents(AppLockConstants.NEW_APP_INSTALL_DIALOG_BOX, "Lock Clicked", "lock_clicked", packageName);
                     }
                 });
         builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int id) {
                 // User cancelled the dialog
-                AppLockLogEvents.logEvents(AppLockConstants.NEW_APP_INSTALL_DIALOG_BOX, "Cancel Clicked", "cancel_clicked", "");
+//                AppLockLogEvents.logEvents(AppLockConstants.NEW_APP_INSTALL_DIALOG_BOX, "Cancel Clicked", "cancel_clicked", "");
 
             }
         });
@@ -93,7 +93,7 @@ public class NewAppInstalledReceiver extends BroadcastReceiver {
                 if (keyCode == KeyEvent.KEYCODE_BACK
                         && event.getAction() == KeyEvent.ACTION_UP) {
                     dialog.cancel();
-                    AppLockLogEvents.logEvents(AppLockConstants.NEW_APP_INSTALL_DIALOG_BOX, "Cancel Clicked", "cancel_clicked", "");
+//                    AppLockLogEvents.logEvents(AppLockConstants.NEW_APP_INSTALL_DIALOG_BOX, "Cancel Clicked", "cancel_clicked", "");
                 }
                 return true;
             }
@@ -101,7 +101,7 @@ public class NewAppInstalledReceiver extends BroadcastReceiver {
         WindowManager.LayoutParams wmlp = dialog.getWindow().getAttributes();
         wmlp.gravity = Gravity.CENTER;
         dialog.show();
-        AppLockLogEvents.logEvents(AppLockConstants.NEW_APP_INSTALL_DIALOG_BOX, "New App Installed Dialog Shown", "new_app_installed_dialog_shown", packageName);
+//        AppLockLogEvents.logEvents(AppLockConstants.NEW_APP_INSTALL_DIALOG_BOX, "New App Installed Dialog Shown", "new_app_installed_dialog_shown", packageName);
     }
 
 

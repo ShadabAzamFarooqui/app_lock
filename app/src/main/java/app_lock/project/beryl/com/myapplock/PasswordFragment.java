@@ -14,6 +14,8 @@ import android.widget.Toast;
 
 import com.takwolf.android.lock9.Lock9View;
 
+import app_lock.project.beryl.com.myapplock.navigation.HomeActivity;
+
 
 /**
  * Created by Shadab Aazam on 11/09/2018.
@@ -66,10 +68,10 @@ public class PasswordFragment extends Fragment {
                 editor.putBoolean(AppLockConstants.IS_PASSWORD_SET, true);
                 editor.commit();
 
-                Intent i = new Intent(getActivity(), MainActivity.class);
+                Intent i = new Intent(getActivity(), HomeActivity.class);
                 getActivity().startActivity(i);
                 getActivity().finish();
-                AppLockLogEvents.logEvents(AppLockConstants.MAIN_SCREEN, "Confirm Password", "confirm_password", "");
+//                AppLockLogEvents.logEvents(AppLockConstants.MAIN_SCREEN, "Confirm Password", "confirm_password", "");
 
             }
         });
@@ -81,7 +83,7 @@ public class PasswordFragment extends Fragment {
                 textView.setText("Draw Pattern");
                 confirmButton.setEnabled(false);
                 retryButton.setEnabled(false);
-                AppLockLogEvents.logEvents(AppLockConstants.MAIN_SCREEN, "Retry Password", "retry_password", "");
+//                AppLockLogEvents.logEvents(AppLockConstants.MAIN_SCREEN, "Retry Password", "retry_password", "");
             }
         });
 

@@ -58,7 +58,7 @@ public class PasswordSetActivity extends AppCompatActivity {
                 Intent i = new Intent(PasswordSetActivity.this, PasswordRecoverSetActivity.class);
                 startActivity(i);
                 finish();
-                AppLockLogEvents.logEvents(AppLockConstants.FIRST_TIME_PASSWORD_SET_SCREEN, "Confirm Password", "confirm_password", "");
+//                AppLockLogEvents.logEvents(AppLockConstants.FIRST_TIME_PASSWORD_SET_SCREEN, "Confirm Password", "confirm_password", "");
             }
         });
         retryButton.setOnClickListener(new View.OnClickListener() {
@@ -69,7 +69,7 @@ public class PasswordSetActivity extends AppCompatActivity {
                 textView.setText("Draw Pattern");
                 confirmButton.setEnabled(false);
                 retryButton.setEnabled(false);
-                AppLockLogEvents.logEvents(AppLockConstants.FIRST_TIME_PASSWORD_SET_SCREEN, "Retry Password", "retry_password", "");
+//                AppLockLogEvents.logEvents(AppLockConstants.FIRST_TIME_PASSWORD_SET_SCREEN, "Retry Password", "retry_password", "");
             }
         });
 

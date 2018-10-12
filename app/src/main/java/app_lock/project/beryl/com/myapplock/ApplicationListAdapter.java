@@ -15,6 +15,8 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
+import static app_lock.project.beryl.com.myapplock.navigation.HomeActivity.mProgressDialog;
+
 /**
  * Created by Shadab Aazam on 11/09/2018.
  */
@@ -86,6 +88,9 @@ public class ApplicationListAdapter extends RecyclerView.Adapter<ApplicationList
                 installedApps.clear();
                 installedApps.addAll(unlockedFilteredAppList);
             }
+            mProgressDialog.dismiss();
+        }else {
+            mProgressDialog.dismiss();
         }
     }
 
@@ -120,10 +125,10 @@ public class ApplicationListAdapter extends RecyclerView.Adapter<ApplicationList
         holder.switchView.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked) {
-                    AppLockLogEvents.logEvents(AppLockConstants.MAIN_SCREEN, "Lock Clicked", "lock_clicked", appInfo.getPackageName());
+//                    AppLockLogEvents.logEvents(AppLockConstants.MAIN_SCREEN, "Lock Clicked", "lock_clicked", appInfo.getPackageName());
                     sharedPreference.addLocked(context, appInfo.getPackageName());
                 } else {
-                    AppLockLogEvents.logEvents(AppLockConstants.MAIN_SCREEN, "Unlock Clicked", "unlock_clicked", appInfo.getPackageName());
+//                    AppLockLogEvents.logEvents(AppLockConstants.MAIN_SCREEN, "Unlock Clicked", "unlock_clicked", appInfo.getPackageName());
                     sharedPreference.removeLocked(context, appInfo.getPackageName());
                 }
             }

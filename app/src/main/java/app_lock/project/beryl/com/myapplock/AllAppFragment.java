@@ -9,6 +9,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import app_lock.project.beryl.com.myapplock.navigation.HomeActivity;
+
+import static app_lock.project.beryl.com.myapplock.navigation.HomeActivity.mProgressDialog;
+
 /**
  * Created by Shadab Aazam on 11/09/2018.
  */
@@ -49,9 +53,8 @@ public class AllAppFragment extends Fragment {
         // use a linear layout manager
         mLayoutManager = new LinearLayoutManager(getActivity());
         mRecyclerView.setLayoutManager(mLayoutManager);
-        mAdapter = new ApplicationListAdapter(((MainActivity) getActivity()).getListOfInstalledApp(getActivity()), getActivity(), requiredAppsType);
+        mAdapter = new ApplicationListAdapter(((HomeActivity) getActivity()).getListOfInstalledApp(getActivity()), getActivity(), requiredAppsType);
         mRecyclerView.setAdapter(mAdapter);
-
         return v;
 
     }

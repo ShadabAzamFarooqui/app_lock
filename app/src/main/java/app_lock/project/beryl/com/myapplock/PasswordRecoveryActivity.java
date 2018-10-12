@@ -93,7 +93,7 @@ public class PasswordRecoveryActivity extends AppCompatActivity {
                 } else {
                     Toast.makeText(getApplicationContext(), "Please select a question and write an answer", Toast.LENGTH_SHORT).show();
                 }
-                AppLockLogEvents.logEvents(AppLockConstants.PASSWORD_RECOVER_SET_SCREEN, "Recover", "recover", "");
+//                AppLockLogEvents.logEvents(AppLockConstants.PASSWORD_RECOVER_SET_SCREEN, "Recover", "recover", "");
 
             }
         });
