@@ -10,7 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 /**
- * Created by amitshekhar on 30/04/15.
+ * Created by Shadab Aazam on 11/09/2018.
  */
 public class AllAppFragment extends Fragment {
 

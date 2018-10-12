@@ -21,7 +21,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by amitshekhar on 02/05/15.
+ * Created by Shadab Aazam on 11/09/2018.
  */
 public class PasswordRecoverSetActivity extends AppCompatActivity {
     SharedPreferences sharedPreferences;

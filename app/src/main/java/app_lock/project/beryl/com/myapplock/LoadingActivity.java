@@ -8,7 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 
 
 /**
- * Created by amitshekhar on 23/05/15.
+ * Created by Shadab Aazam on 11/09/2018.
  */
 public class LoadingActivity extends AppCompatActivity {
     Context context;

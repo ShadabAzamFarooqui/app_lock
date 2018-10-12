@@ -5,7 +5,7 @@ import android.content.Intent;
 import android.graphics.drawable.Drawable;
 
 /**
- * Created by amitshekhar on 28/04/15.
+ * Created by Shadab Aazam on 11/09/2018.
  */
 public class AppInfo {
     private String name;

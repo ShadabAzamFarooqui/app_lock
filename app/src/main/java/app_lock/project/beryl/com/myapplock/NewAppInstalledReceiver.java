@@ -14,7 +14,7 @@ import android.view.Window;
 import android.view.WindowManager;
 
 /**
- * Created by amitshekhar on 01/05/15.
+ * Created by Shadab Aazam on 11/09/2018.
  */
 public class NewAppInstalledReceiver extends BroadcastReceiver {
 

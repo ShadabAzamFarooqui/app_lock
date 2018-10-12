@@ -16,7 +16,7 @@ import com.google.android.gms.analytics.Tracker;
 import com.takwolf.android.lock9.Lock9View;
 
 /**
- * Created by amitshekhar on 30/04/15.
+ * Created by Shadab Aazam on 11/09/2018.
  */
 public class PasswordSetActivity extends AppCompatActivity {
     Lock9View lock9View;

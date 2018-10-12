@@ -1,7 +1,7 @@
 package app_lock.project.beryl.com.myapplock;
 
 /**
- * Created by amitshekhar on 28/04/15.
+ * Created by Shadab Aazam on 11/09/2018.
  */
 
 import android.content.Context;
