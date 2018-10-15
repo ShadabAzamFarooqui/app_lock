@@ -55,6 +55,7 @@ public class AllAppFragment extends Fragment {
         mRecyclerView.setLayoutManager(mLayoutManager);
         mAdapter = new ApplicationListAdapter(((HomeActivity) getActivity()).getListOfInstalledApp(getActivity()), getActivity(), requiredAppsType);
         mRecyclerView.setAdapter(mAdapter);
+        mProgressDialog.dismiss();
         return v;
 
     }

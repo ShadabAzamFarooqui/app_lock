@@ -88,9 +88,6 @@ public class ApplicationListAdapter extends RecyclerView.Adapter<ApplicationList
                 installedApps.clear();
                 installedApps.addAll(unlockedFilteredAppList);
             }
-            mProgressDialog.dismiss();
-        }else {
-            mProgressDialog.dismiss();
         }
     }
 
